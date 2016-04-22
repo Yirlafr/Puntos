@@ -8,7 +8,8 @@ section .bss
 section .data
 	puntos:		dd ".   "
 	punto: 		db ".", 10
-	;n:			equ 0
+	n:			equ 16
+
 
 	;linea_H:	db "___", 10
 	;linea_V:	db "|" , 10
@@ -21,59 +22,67 @@ section .text
 	global _start
 
 _start:
-	nop ; no operation
+	nop
 
 
 tablero:
-	mov ebx, 0
-	mov ecx, 4
-	mov eax, dword[puntos]
+	mov edx, 0
+	mov ecx, 5
 	ciclo:
-		mov dword[matriz + ebx * 4], eax
-		inc ebx
+		push ecx
+		mov ebx, 0
+		mov ecx, 4
+		mov eax, dword[puntos]
+		ciclo1:
+			mov dword[matriz + edx + (ebx * 4)], eax
+			inc ebx
+		loop ciclo1
+		mov eax, dword[punto]
+		mov dword[matriz + n + edx], eax
+		add edx, 18
+		pop ecx
 	loop ciclo
-	mov eax, dword[punto]
-	mov dword[matriz + 16], eax
 
-	mov ebx, 0
-	mov ecx, 4
-	mov eax, dword[puntos]
-	ciclo1:
-		mov dword[matriz + 18 +ebx * 4], eax
-		inc ebx
-	loop ciclo1
-	mov eax, dword[punto]
-	mov dword[matriz + 34], eax
 
-	mov ebx, 0
-	mov ecx, 4
-	mov eax, dword[puntos]
-	ciclo2:
-		mov dword[matriz + 36 + ebx * 4], eax
-		inc ebx
-	loop ciclo2
-	mov eax, dword[punto]
-	mov dword[matriz + 52], eax
+	; mov ebx, 0
+	; mov ecx, 4
+	; mov eax, dword[puntos]
+	; ciclo1:
+	; 	mov dword[matriz + 18 +ebx * 4], eax
+	; 	inc ebx
+	; loop ciclo1
+	; mov eax, dword[punto]
+	; mov dword[matriz + 34], eax
 
-	mov ebx, 0
-	mov ecx, 4
-	mov eax, dword[puntos]
-	ciclo3:
-		mov dword[matriz + 54+ ebx * 4], eax
-		inc ebx
-	loop ciclo3
-	mov eax, dword[punto]
-	mov dword[matriz + 70], eax
+	; mov ebx, 0
+	; mov ecx, 4
+	; mov eax, dword[puntos]
+	; ciclo2:
+	; 	mov dword[matriz + 36 + ebx * 4], eax
+	; 	inc ebx
+	; loop ciclo2
+	; mov eax, dword[punto]
+	; mov dword[matriz + 52], eax
 
-	mov ebx, 0
-	mov ecx, 4
-	mov eax, dword[puntos]
-	ciclo4:
-		mov dword[matriz + 72 + ebx * 4], eax
-		inc ebx
-	loop ciclo4
-	mov eax, dword[punto]
-	mov dword[matriz + 88], eax
+	; mov ebx, 0
+	; mov ecx, 4
+	; mov eax, dword[puntos]
+	; ciclo3:
+	; 	mov dword[matriz + 54+ ebx * 4], eax
+	; 	inc ebx
+	; loop ciclo3
+	; mov eax, dword[punto]
+	; mov dword[matriz + 70], eax
+
+	; mov ebx, 0
+	; mov ecx, 4
+	; mov eax, dword[puntos]
+	; ciclo4:
+	; 	mov dword[matriz + 72 + ebx * 4], eax
+	; 	inc ebx
+	; loop ciclo4
+	; mov eax, dword[punto]
+	; mov dword[matriz + 88], eax
 	;mov eax, dword[puntos]
 	;mov dword[matriz +18], eax
 
