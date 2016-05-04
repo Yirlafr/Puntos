@@ -1,0 +1,35 @@
+Proyecto #1
+Puntos
+Instituto Tecnologico de Costa Rica.
+Arquitectura de Computadores.
+Ingeniería en Computación.
+
+Yirlany Fonseca Ruiz.
+Luis Adrian Mendez Paez
+
+Descripción del Proyecto #1.
+
+El presente proyecto consistió en programar el juego Puntos, el cual trata de que cada jugador debe trar¿tar de crear un cuadro uniendo puntos que se encuentren paralelamente.
+
+El jugador que logre crear más cuadros será el ganador de la partida.
+
+Documentos:
+
+leds.hex
+El documento en formato hex posee el código adaptado a formato en base 
+hexadecimal.
+
+leds.o 
+Documento objeto, el compilador crea un documentoobjeto para cada una de 
+las fuentes, antes de enlazarlas en un documento ejecutable.
+
+leds.ino
+El código escrito e lenguaje arduino es llamado sketch (boceto), estos bocetos
+son guardados en un documento de formato ino.
+
+leds.asm
+Documento en que contiene y guarda código escrito en lenguaje ensamblador.
+
+leds.fzz
+Archivo que posee código fuente del circuito en fritzing.
+
