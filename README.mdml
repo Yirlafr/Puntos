@@ -20,12 +20,8 @@ El documento en formato hex posee el código adaptado a formato en base
 hexadecimal.
 
 leds.o 
-Documento objeto, el compilador crea un documentoobjeto para cada una de 
+Documento objeto, el compilador crea un documento objeto para cada una de 
 las fuentes, antes de enlazarlas en un documento ejecutable.
-
-leds.ino
-El código escrito e lenguaje arduino es llamado sketch (boceto), estos bocetos
-son guardados en un documento de formato ino.
 
 leds.asm
 Documento en que contiene y guarda código escrito en lenguaje ensamblador.
